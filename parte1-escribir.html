@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wattpad - Historia sin título</title>
+<style>
+    /* Estilos generales */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Estilos para el editor */
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.editor-header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editor-header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.editor-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.editor-buttons button {
+  background-color: #6c33b7;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.editor-buttons button:hover {
+  background-color: #7f37a8;
+}
+
+.editor-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+}
+
+.editor-toolbar button {
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.editor-toolbar button:hover {
+  background-color: #f2f2f2;
+}
+
+.editor-textarea {
+  flex: 1;
+  padding: 20px;
+  font-size: 18px;
+  resize: vertical;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+  height: 500px;
+  width: 100%;
+  overflow-y: auto; /* Agregamos una barra de desplazamiento vertical */
+  padding-bottom: 800px; /* Agregamos espacio adicional en la parte inferior */
+  line-height: 1.5; /* Aumentamos la altura de la línea para mejorar la legibilidad */
+}
+
+.editor-textarea:focus {
+  border-color: #7f37a8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el footer */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  clear: both;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Estilos interactivos */
+
+.editor:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.editor-header:hover {
+  background-color: #444;
+}
+
+.editor-buttons button:hover {
+  background-color: #8d46b6;
+}
+
+.editor-toolbar button:hover {
+  background-color: #f2f2f2;
+}
+
+.editor-textarea:focus {
+  border-color: #337ab7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body:hover {
+  background-color: #f2f2f2;
+}
+</style>
+</head>
+<body>
+
+    <main>
+        <div class="editor">
+            <div class="editor-header">
+                <h2>Historia sin título</h2>
+                <div class="editor-buttons">
+                    <button>Publicar</button>
+                    <button>Guardar</button>
+                    <button>Vista previa</button>
+                    <a href="http://127.0.0.1:3002/index.html">
+                      <button>Cancelar</button>
+                    </a>
+                </div>
+            </div>
+            <div class="editor-content">
+                <div class="editor-toolbar">
+                    <button><i class="fas fa-bold"></i></button>
+                    <button><i class="fas fa-italic"></i></button>
+                    <button><i class="fas fa-underline"></i></button>
+                    <button><i class="fas fa-link"></i></button>
+                    <button><i class="fas fa-image"></i></button>
+                </div>
+                <textarea class="editor-textarea" id="editor" placeholder="Escribe tu historia aquí..."></textarea>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Wonderwold</p>
+    </footer>
+
+    <script>
+        // Agregamos un evento de cambio de texto en el textarea
+        document.getElementById('editor').addEventListener('input', function() {
+            // Aquí puedes agregar la lógica para guardar el texto en una base de datos o realizar otras acciones
+            console.log('Texto cambiado:', this.value);
+        });
+    </script>
+
+</body>
+</html>

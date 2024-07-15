@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Agregar historia-Escribir </title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 30px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .left-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .left-actions a.btn-cancel {
+            margin-right: 10px;
+        }
+
+        .left-actions a.btn-cancel img {
+            width: 24px;
+            height: 24px;
+            border: none;
+            vertical-align: middle;
+        }
+
+        .left-actions span {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .right-actions {
+  display: flex;
+  align-items: center;
+}
+
+.right-actions a.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+
+.right-actions a.btn:hover {
+  opacity: 0.8;
+}
+
+.right-actions a.btn-grey {
+  background-color: #aaa8a8;
+}
+
+.right-actions a.btn-orange {
+  background-color: #8e7aff;
+}
+
+.right-actions a.btn-grey:hover {
+  background-color: #979797;
+}
+
+.right-actions a.btn-orange:hover {
+  background-color: #733af8;
+}
+
+.right-actions a.btn + a.btn {
+  margin-left: 10px;
+}
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cover {
+            width: 350px;
+            height: 450px;
+            border: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: 180px;
+        }
+
+        .cover img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .details {
+            width: 500px;
+            margin-right: 180px;
+        }
+
+        .details h5 {
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .details input,
+        .details select,
+        .details textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .details textarea {
+            height: 100px;
+        }
+
+        .details button {
+            background-color: #898b8d;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-actions">
+        <div class="left-actions">
+            <a href="http://127.0.0.1:3000/index.html" class="btn-cancel">
+                <img src="https://cdn-icons-png.flaticon.com/128/17/17699.png" alt="Volver">
+            </a>
+            <span>Agregar información de la historia</span>
+        </div>
+        <div class="right-actions">
+            <a href="http://127.0.0.1:3000/index.html" class="btn btn-grey on-edit-cancel">Cancelar</a>
+            <a href="http://127.0.0.1:3000/parte1-escribir.html" class="btn btn-orange on-edit-save">Saltar</a>
+                <div id="finish-tooltip" data-toggle="popover" data-original-title="" title=""></div>
+            </button>
+        </div>
+    </div><br>
+
+    <div class="container">
+        <div class="cover">
+            <img src="placeholder.png" alt="Portada">
+            <input type="file" id="coverImage" name="coverImage">
+        </div>
+        <div class="details">
+            <h3>Detalles de la historia</h3>
+            <input type="text" placeholder="Historia sin título" value="Historia sin título">
+            <textarea placeholder="Descripción"></textarea>
+            <h3>Personajes principales</h3>
+            <input type="text" placeholder="Nombre">
+            <select>
+                <option value="">Selecciona una</option>
+                <option value="protagonista">Protagonista</option>
+                <option value="antagonista">Antagonista</option>
+                <option value="secundario">Secundario</option>
+            </select>
+            <h3>Etiquetas</h3>
+            <input type="text" placeholder="Agrega una etiqueta">
+            <button>+</button>
+            <h3>Audiencia principal</h3>
+            <select>
+                <option value="">¿Quién es su audiencia primaria?</option>
+                <option value="juvenil">Juvenil</option>
+                <option value="adulto">Adulto</option>
+                <option value="todos">Todos</option>
+            </select>
+            <h3>Idioma</h3>
+            <select>
+                <option value="es">Español</option>
+                <option value="en">Inglés</option>
+                <option value="fr">Portugués</option>
+                <option value="fr">Francés</option>
+                <option value="fr">Chino</option>
+            </select>
+            <h3>Derechos de Autor</h3>
+            <select>
+                <option value="todos">Todos los derechos reservados</option>
+                <option value="algunos">Algunos derechos reservados</option>
+                <option value="ninguno">Sin derechos de autor</option>
+            </select>
+            <p>No permitas que tu trabajo sea utilizado o adaptado, bajo ningún concepto, sin tu permiso.</p>
+            <h3>Clasificación</h3>
+            <select>
+                <option value="madura">Madura</option>
+                <option value="general">Amor</option>
+                <option value="general">Romance</option>
+                <option value="general">Fantasía</option>
+                <option value="general">Terror</option>
+                <option value="general">General</option>
+            </select>
+            <p>
+            <h5>Tu historia es apropiada para todos los públicos. La comunidad de Wonderwold tiene la capacidad de
+                calificar tu historia.
+            </h5>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
